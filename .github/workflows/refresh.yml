@@ -1,0 +1,32 @@
+name: refresh redirect card
+
+# The card quotes repo/contribution/star counts from the main account. Those
+# drift, so regenerate daily rather than leaving numbers frozen at publish time.
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild SVG with live stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_svg.py
+      - name: Commit only if the numbers actually moved
+        run: |
+          if git diff --quiet -- assets/redirect.svg; then
+            echo "stats unchanged, nothing to commit"
+          else
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/redirect.svg
+            git commit -m "refresh redirect card stats"
+            git push
+          fi
