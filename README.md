@@ -6,7 +6,7 @@
 
 ### → [**@saksham10arora-dotcom**](https://github.com/saksham10arora-dotcom)
 
-<sub>this handle matches my <a href="https://x.com/nerfsaksham">X</a>. the commits live on the other one.</sub>
+**This handle matches my [X](https://x.com/nerfsaksham). The commits live on the other one.**
 
 <br/>
 
@@ -14,6 +14,8 @@
 [![Blog](https://img.shields.io/badge/chimera-aa42ff?style=flat-square&logo=quasar&logoColor=white&labelColor=0d0b14)](https://blog.saksham.digital)
 [![Main](https://img.shields.io/badge/main%20account-1e1a2e?style=flat-square&logo=github&logoColor=aa42ff&labelColor=0d0b14)](https://github.com/saksham10arora-dotcom)
 [![X](https://img.shields.io/badge/x-ffffff?style=flat-square&logo=x&logoColor=white&labelColor=0d0b14)](https://x.com/nerfsaksham)
+
+<sub>the header values above are fetched live — <a href="https://github.com/nerfsaksham/nerfsaksham/actions">refreshed daily</a></sub>
 
 </div>
 
